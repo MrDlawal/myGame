@@ -1,0 +1,213 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 215, 238);
+}
+
+#next-button1 
+{
+  
+
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    cursor: pointer;
+    display: none;
+
+}
+
+#all-above {
+    flex: 1; /* Flex-grow: 1; flex-shrink: 1; flex-basis: 0; */
+    margin: 5px 0; /* Adjusted for less space between items */
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px; /* Less space between each item */
+    align-items: stretch;
+    font-size: large;
+}
+
+.score, .showscore, .dice {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px; /* Add padding inside each element */
+    margin-bottom: 10px; /* Space between each element */
+    border: 2px solid #000; /* Add border to make it conspicuous */
+    border-radius: 20px; /* Conspicuous border-radius */
+    background-color:#4CAF50; /* Light background for visibility */
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-gap: 5px;
+    margin-bottom: 10px; /* Reduced margin to bring closer to buttons */
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: aquamarine;
+}
+
+.dice {
+    width: 70px; /* Adjusted to match button width */
+    height: 70px; /* Adjusted for consistency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 2px solid black;
+    margin-bottom: 10px; /* Reduced margin for closer spacing */
+    margin-right: 5px;
+    border-radius: 20px; /* Conspicuous border-radius */
+    background-color: #fff; /* Background color for visibility */
+}
+#Play-again
+{
+
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons in a column */
+    align-items: center; /* Center align buttons */
+    gap: 10px; /* Space between buttons */
+
+}
+
+.roll-button, .move-letter, .start-button,.exit-button {
+   
+padding: 10px 20px;
+ font-size: 1em;
+ cursor: pointer;
+ width: 90px;
+ box-sizing: border-box;
+ border-radius: 50%; /* Make the buttons round */
+
+   }
+
+.btn {
+    background: #f0f0f0;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    font-size: large;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Reduced margin for closer spacing */
+}
+
+@keyframes blink 
+{
+    0% { background-color: green; }
+    50% { background-color: white; }
+    100% { background-color: green; }
+}
+
+.blinking 
+{
+    animation: blink 0.25s infinite;
+}
+
+
+.btn:hover:not([disabled]) {
+    background-color: black;
+    color: white;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.incorrect {
+    background-color: red;
+    color: white;
+}
+
+dialog 
+{
+    width: 20%;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition-duration: 0.2s;
+    background-color: #e8edee;
+}
+
+.close-button {
+
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+
+
+    }
+
+#next-button {
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    cursor: pointer;
+    display: none;
+}
+
+#question {
+    font-size: large;
+}
+
+.username {
+    justify-content: space-between;
+}

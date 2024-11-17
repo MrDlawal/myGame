@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Ludo</title>
+    <link rel="stylesheet" href="grid2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ 
+    <div id="all-above">
+        <div id="icon-container"></div>
+        
+
+        <div id="score">Score: <span id="showscore">0</span></div>
+        <div id="timer-2">Time: <span id="timer-3">0</span></div>
+        
+        <div id="dice" class="dice">0,0</div>
+        <button id="move" class="move-letter">MOVE</button>
+        <button id="count" class="roll-button">ROLL DICE</button>
+        <button id="start" class="start-button">START</button>
+        <div id="highScore">Best Time : <span id="timer-5">0</span></div>
+        <div onclick="counting()"></div>
+        <div onclick="moving()"></div>
+        
+    </div>   
+
+    <dialog id="instructions">
+        <h1>4 Easy steps...</h1>
+        <h2> 1.Start the Game</h2>
+        <h2> 2.Roll the dice </h2>
+        <h2>3. Move the Apple</h2>
+        <h2> 4. Click the squares </h2>
+        <button id="next-button1" style="display: block;">Next</button>
+    </dialog>
+
+    
+    <dialog id="quiz-dialog">
+        <div id="rightwrong"></div>
+        <span class="close-button">&times;</span>
+        <div id="question"></div>
+        <div id="answer-button"></div>
+        <div id="timer">Count: <span id="timer-4">12</span></div>
+        <button id="next-button" style="display: none;">Next</button>
+    </dialog>
+
+
+
+
+ <dialog id="final-score-dialog">
+       
+            <h2>Game Over!</h2>
+        
+            <p id="final-percentage">Percentage: </p>
+            <p id="questions-attempted">Questions Attempted: </p>
+            <p id="final-score"></p>
+            <p id="final-time-used"></p>
+            <h2>Time used is considered for best time only if the percentage is 90% minimum </h2>
+         
+                <button id="Play-again">Play Again </button>
+                           
+            
+    </dialog>
+    
+
+        <div id="cells" class="grid">
+        <div id="cell-0" class="cell"></div>
+        <div id="cell-1" class="cell"></div>
+        <div id="cell-2" class="cell"></div>
+        <div id="cell-3" class="cell"></div>
+        <div id="cell-4" class="cell"></div>
+        <div id="cell-5" class="cell"></div>
+        <div id="cell-6" class="cell"></div>
+        <div id="cell-7" class="cell"></div>
+        <div id="cell-8" class="cell"></div>
+        <div id="cell-9" class="cell"></div>
+        <div id="cell-10" class="cell"></div>
+        <div id="cell-11" class="cell"></div>
+        <div id="cell-12" class="cell"></div>
+        <div id="cell-13" class="cell"></div>
+        <div id="cell-14" class="cell"></div>
+        <div id="cell-15" class="cell"></div>
+        <div id="cell-16" class="cell"></div>
+        <div id="cell-17" class="cell"></div>
+        <div id="cell-18" class="cell"></div>
+        <div id="cell-19" class="cell"></div>
+        <div id="cell-20" class="cell"></div>
+        <div id="cell-21" class="cell"></div>
+        <div id="cell-22" class="cell"></div>
+        <div id="cell-23" class="cell"></div>
+        <div id="cell-24" class="cell"></div>
+        <div id="cell-25" class="cell"></div>
+        <div id="cell-26" class="cell"></div>
+        <div id="cell-27" class="cell"></div>
+        <div id="cell-28" class="cell"></div>
+        <div id="cell-29" class="cell"></div>
+        <div id="cell-30" class="cell"></div>
+        <div id="cell-31" class="cell"></div>
+        <div id="cell-32" class="cell"></div>
+        <div id="cell-33" class="cell"></div>
+        <div id="cell-34" class="cell"></div>
+        <div id="cell-35" class="cell"></div>
+        <div id="cell-36" class="cell"></div>
+        <div id="cell-37" class="cell"></div>
+        <div id="cell-38" class="cell"></div>
+        <div id="cell-39" class="cell"></div>
+        <div id="cell-40" class="cell"></div>
+        <div id="cell-41" class="cell"></div>
+        <div id="cell-42" class="cell"></div>
+        <div id="cell-43" class="cell"></div>
+        <div id="cell-44" class="cell"></div>
+        <div id="cell-45" class="cell"></div>
+        <div id="cell-46" class="cell"></div>
+        <div id="cell-47" class="cell"></div>
+        <div id="cell-48" class="cell"></div>
+        <div id="cell-49" class="cell"></div>
+        <div id="cell-50" class="cell"></div>
+        <div id="cell-51" class="cell"></div>
+        <div id="cell-52" class="cell"></div>
+        <div id="cell-53" class="cell"></div>
+        <div id="cell-54" class="cell"></div>
+        <div id="cell-55" class="cell"></div>
+        <div id="cell-56" class="cell"></div>
+        <div id="cell-57" class="cell"></div>
+        <div id="cell-58" class="cell"></div>
+        <div id="cell-59" class="cell"></div>
+        <div id="cell-60" class="cell"></div>
+        <div id="cell-61" class="cell"></div>
+        <div id="cell-62" class="cell"></div>
+        <div id="cell-63" class="cell"></div>
+        <div id="cell-64" class="cell"></div>
+        <div id="cell-65" class="cell"></div>
+        <div id="cell-66" class="cell"></div>
+        <div id="cell-67" class="cell"></div>
+        <div id="cell-68" class="cell"></div>
+        <div id="cell-69" class="cell"></div>
+        <div id="cell-70" class="cell"></div>
+        <div id="cell-71" class="cell"></div>
+        <div id="cell-72" class="cell"></div>
+        <div id="cell-73" class="cell"></div>
+        <div id="cell-74" class="cell"></div>
+        <div id="cell-75" class="cell"></div>
+        <div id="cell-76" class="cell"></div>
+        <div id="cell-77" class="cell"></div>
+        <div id="cell-78" class="cell"></div>
+        <div id="cell-79" class="cell"></div>
+        <div id="cell-80" class="cell"></div>
+        <div id="cell-81" class="cell"></div>
+        <div id="cell-82" class="cell"></div>
+        <div id="cell-83" class="cell"></div>
+        <div id="cell-84" class="cell"></div>
+        <div id="cell-85" class="cell"></div>
+        <div id="cell-86" class="cell"></div>
+        <div id="cell-87" class="cell"></div>
+        <div id="cell-88" class="cell"></div>
+        <div id="cell-89" class="cell"></div>
+        <div id="cell-90" class="cell"></div>
+        <div id="cell-91" class="cell"></div>
+        <div id="cell-92" class="cell"></div>
+        <div id="cell-93" class="cell"></div>
+        <div id="cell-94" class="cell"></div>
+        <div id="cell-95" class="cell"></div>
+        <div id="cell-96" class="cell"></div>
+        <div id="cell-97" class="cell"></div>
+        <div id="cell-98" class="cell"></div>
+        <div id="cell-99" class="cell"></div>
+  
+      
+   
+        <!-- Add more cells as needed -->
+   
+    </div> 
+
+
+    <script src="grid2.js"></script>
+    <script src="grid3.js"></script>
+    <script src="grid4.js"></script>
+
+   </body>
+
+
+</html>
